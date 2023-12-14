@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)file:///C:/Users/Kumar/OneDrive/Desktop/Webpages-codes/Student-Registration%20%201.1/Student-registration.htm -->
+<html lang="en" data-critters-container="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Scholar Connect</title>
+  <!--<base href="/registrations/">--><!-- base href="file:///C:/Users/Kumar/OneDrive/Desktop/Backup/SIH/" -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="https://scholarships.gov.in/registrations/assets/images/nic.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+
+  <style>
+    html {
+      --mat-option-selected-state-label-text-color: #3f51b5;
+      --mat-option-label-text-color: rgba(0, 0, 0, .87);
+      --mat-option-hover-state-layer-color: rgba(0, 0, 0, .04);
+      --mat-option-focus-state-layer-color: rgba(0, 0, 0, .04);
+      --mat-option-selected-state-layer-color: rgba(0, 0, 0, .04)
+    }
+
+    html {
+      --mat-optgroup-label-text-color: rgba(0, 0, 0, .87)
+    }
+
+    html {
+      --mat-option-label-text-font: Roboto, sans-serif;
+      --mat-option-label-text-line-height: 24px;
+      --mat-option-label-text-size: 16px;
+      --mat-option-label-text-tracking: .03125em;
+      --mat-option-label-text-weight: 400
+    }
+
+    html {
+      --mat-optgroup-label-text-font: Roboto, sans-serif;
+      --mat-optgroup-label-text-line-height: 24px;
+      --mat-optgroup-label-text-size: 16px;
+      --mat-optgroup-label-text-tracking: .03125em;
+      --mat-optgroup-label-text-weight: 400
+    }
+
+    html {
+      --mat-select-panel-background-color: white;
+      --mat-select-enabled-trigger-text-color: rgba(0, 0, 0, .87);
+      --mat-select-disabled-trigger-text-color: rgba(0, 0, 0, .38);
+      --mat-select-placeholder-text-color: rgba(0, 0, 0, .6);
+      --mat-select-enabled-arrow-color: rgba(0, 0, 0, .54);
+      --mat-select-disabled-arrow-color: rgba(0, 0, 0, .38);
+      --mat-select-focused-arrow-color: rgba(63, 81, 181, .87);
+      --mat-select-invalid-arrow-color: rgba(244, 67, 54, .87)
+    }
+
+    html {
+      --mat-select-trigger-text-font: Roboto, sans-serif;
+      --mat-select-trigger-text-line-height: 24px;
+      --mat-select-trigger-text-size: 16px;
+      --mat-select-trigger-text-tracking: .03125em;
+      --mat-select-trigger-text-weight: 400
+    }
+
+    html {
+      --mat-autocomplete-background-color: white
+    }
+
+    html {
+      --mat-paginator-container-text-color: rgba(0, 0, 0, .87);
+      --mat-paginator-container-background-color: white;
+      --mat-paginator-enabled-icon-color: rgba(0, 0, 0, .54);
+      --mat-paginator-disabled-icon-color: rgba(0, 0, 0, .12)
+    }
+
+    html {
+      --mat-paginator-container-size: 56px
+    }
+
+    html {
+      --mat-paginator-container-text-font: Roboto, sans-serif;
+      --mat-paginator-container-text-line-height: 20px;
+      --mat-paginator-container-text-size: 12px;
+      --mat-paginator-container-text-tracking: .0333333333em;
+      --mat-paginator-container-text-weight: 400;
+      --mat-paginator-select-trigger-text-size: 12px
+    }
+
+    html {
+      --mdc-checkbox-disabled-selected-icon-color: rgba(0, 0, 0, .38);
+      --mdc-checkbox-disabled-unselected-icon-color: rgba(0, 0, 0, .38);
+      --mdc-checkbox-selected-checkmark-color: #fff;
+      --mdc-checkbox-selected-focus-icon-color: #ff4081;
+      --mdc-checkbox-selected-hover-icon-color: #ff4081;
+      --mdc-checkbox-selected-icon-color: #ff4081;
+      --mdc-checkbox-selected-pressed-icon-color: #ff4081;
+      --mdc-checkbox-unselected-focus-icon-color: #212121;
+      --mdc-checkbox-unselected-hover-icon-color: #212121;
+      --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, .54);
+      --mdc-checkbox-unselected-pressed-icon-color: rgba(0, 0, 0, .54);
+      --mdc-checkbox-selected-focus-state-layer-color: #ff4081;
+      --mdc-checkbox-selected-hover-state-layer-color: #ff4081;
+      --mdc-checkbox-selected-pressed-state-layer-color: #ff4081;
+      --mdc-checkbox-unselected-focus-state-layer-color: black;
+      --mdc-checkbox-unselected-hover-state-layer-color: black;
+      --mdc-checkbox-unselected-pressed-state-layer-color: black
+    }
+
+    html {
+      --mdc-checkbox-state-layer-size: 40px
+    }
+
+    .mat-typography {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      font-family: Roboto, sans-serif;
+      letter-spacing: .0178571429em
+    }
+
+    body {
+      font-family: PoppinsRegular;
+      color: #525252;
+      line-height: 1.6
+    }
+
+    @charset "UTF-8";
+
+    :root {
+      --bs-blue: #0d6efd;
+      --bs-indigo: #6610f2;
+      --bs-purple: #6f42c1;
+      --bs-pink: #d63384;
+      --bs-red: #dc3545;
+      --bs-orange: #fd7e14;
+      --bs-yellow: #ffc107;
+      --bs-green: #198754;
+      --bs-teal: #20c997;
+      --bs-cyan: #0dcaf0;
+      --bs-black: #000;
+      --bs-white: #fff;
+      --bs-gray: #6c757d;
+      --bs-gray-dark: #343a40;
+      --bs-gray-100: #f8f9fa;
+      --bs-gray-200: #e9ecef;
+      --bs-gray-300: #dee2e6;
+      --bs-gray-400: #ced4da;
+      --bs-gray-500: #adb5bd;
+      --bs-gray-600: #6c757d;
+      --bs-gray-700: #495057;
+      --bs-gray-800: #343a40;
+      --bs-gray-900: #212529;
+      --bs-primary: #0d6efd;
+      --bs-secondary: #6c757d;
+      --bs-success: #198754;
+      --bs-info: #0dcaf0;
+      --bs-warning: #ffc107;
+      --bs-danger: #dc3545;
+      --bs-light: #f8f9fa;
+      --bs-dark: #212529;
+      --bs-primary-rgb: 13, 110, 253;
+      --bs-secondary-rgb: 108, 117, 125;
+      --bs-success-rgb: 25, 135, 84;
+      --bs-info-rgb: 13, 202, 240;
+      --bs-warning-rgb: 255, 193, 7;
+      --bs-danger-rgb: 220, 53, 69;
+      --bs-light-rgb: 248, 249, 250;
+      --bs-dark-rgb: 33, 37, 41;
+      --bs-primary-text-emphasis: #052c65;
+      --bs-secondary-text-emphasis: #2b2f32;
+      --bs-success-text-emphasis: #0a3622;
+      --bs-info-text-emphasis: #055160;
+      --bs-warning-text-emphasis: #664d03;
+      --bs-danger-text-emphasis: #58151c;
+      --bs-light-text-emphasis: #495057;
+      --bs-dark-text-emphasis: #495057;
+      --bs-primary-bg-subtle: #cfe2ff;
+      --bs-secondary-bg-subtle: #e2e3e5;
+      --bs-success-bg-subtle: #d1e7dd;
+      --bs-info-bg-subtle: #cff4fc;
+      --bs-warning-bg-subtle: #fff3cd;
+      --bs-danger-bg-subtle: #f8d7da;
+      --bs-light-bg-subtle: #fcfcfd;
+      --bs-dark-bg-subtle: #ced4da;
+      --bs-primary-border-subtle: #9ec5fe;
+      --bs-secondary-border-subtle: #c4c8cb;
+      --bs-success-border-subtle: #a3cfbb;
+      --bs-info-border-subtle: #9eeaf9;
+      --bs-warning-border-subtle: #ffe69c;
+      --bs-danger-border-subtle: #f1aeb5;
+      --bs-light-border-subtle: #e9ecef;
+      --bs-dark-border-subtle: #adb5bd;
+      --bs-white-rgb: 255, 255, 255;
+      --bs-black-rgb: 0, 0, 0;
+      --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+      --bs-body-font-family: var(--bs-font-sans-serif);
+      --bs-body-font-size: 1rem;
+      --bs-body-font-weight: 400;
+      --bs-body-line-height: 1.5;
+      --bs-body-color: #212529;
+      --bs-body-color-rgb: 33, 37, 41;
+      --bs-body-bg: #fff;
+      --bs-body-bg-rgb: 255, 255, 255;
+      --bs-emphasis-color: #000;
+      --bs-emphasis-color-rgb: 0, 0, 0;
+      --bs-secondary-color: rgba(33, 37, 41, .75);
+      --bs-secondary-color-rgb: 33, 37, 41;
+      --bs-secondary-bg: #e9ecef;
+      --bs-secondary-bg-rgb: 233, 236, 239;
+      --bs-tertiary-color: rgba(33, 37, 41, .5);
+      --bs-tertiary-color-rgb: 33, 37, 41;
+      --bs-tertiary-bg: #f8f9fa;
+      --bs-tertiary-bg-rgb: 248, 249, 250;
+      --bs-heading-color: inherit;
+      --bs-link-color: #0d6efd;
+      --bs-link-color-rgb: 13, 110, 253;
+      --bs-link-decoration: underline;
+      --bs-link-hover-color: #0a58ca;
+      --bs-link-hover-color-rgb: 10, 88, 202;
+      --bs-code-color: #d63384;
+      --bs-highlight-bg: #fff3cd;
+      --bs-border-width: 1px;
+      --bs-border-style: solid;
+      --bs-border-color: #dee2e6;
+      --bs-border-color-translucent: rgba(0, 0, 0, .175);
+      --bs-border-radius: .375rem;
+      --bs-border-radius-sm: .25rem;
+      --bs-border-radius-lg: .5rem;
+      --bs-border-radius-xl: 1rem;
+      --bs-border-radius-xxl: 2rem;
+      --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+      --bs-border-radius-pill: 50rem;
+      --bs-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+      --bs-box-shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+      --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+      --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, .075);
+      --bs-focus-ring-width: .25rem;
+      --bs-focus-ring-opacity: .25;
+      --bs-focus-ring-color: rgba(13, 110, 253, .25);
+      --bs-form-valid-color: #198754;
+      --bs-form-valid-border-color: #198754;
+      --bs-form-invalid-color: #dc3545;
+      --bs-form-invalid-border-color: #dc3545
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      :root {
+        scroll-behavior: smooth
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--bs-body-font-family);
+      font-size: var(--bs-body-font-size);
+      font-weight: var(--bs-body-font-weight);
+      line-height: var(--bs-body-line-height);
+      color: var(--bs-body-color);
+      text-align: var(--bs-body-text-align);
+      background-color: var(--bs-body-bg);
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+
+    :root {
+      --bs-breakpoint-xs: 0;
+      --bs-breakpoint-sm: 576px;
+      --bs-breakpoint-md: 768px;
+      --bs-breakpoint-lg: 992px;
+      --bs-breakpoint-xl: 1200px;
+      --bs-breakpoint-xxl: 1400px
+    }
+
+    :root {
+      --fa-style-family-brands: "Font Awesome 6 Brands";
+      --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands"
+    }
+
+    @font-face {
+      font-family: "Font Awesome 6 Brands";
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url(fa-brands-400.9210030c21e68a90.woff2) format("woff2"), url(fa-brands-400.5f7c5bb77eae788b.ttf) format("truetype")
+    }
+
+    :root {
+      --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free"
+    }
+
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url(fa-regular-400.02ad4ff91ef84f65.woff2) format("woff2"), url(fa-regular-400.570a165b064c1468.ttf) format("truetype")
+    }
+
+    :root {
+      --fa-style-family-classic: "Font Awesome 6 Free";
+      --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free"
+    }
+
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+      src: url(fa-solid-900.3eae9857c06e9372.woff2) format("woff2"), url(fa-solid-900.0b5caff7ad4bc179.ttf) format("truetype")
+    }
+  </style>
+  <link rel="stylesheet" href="./student_regis_files/styles.a6f96b69bdaabee8.css" media="all"
+    onload="this.media=&#39;all&#39;"><noscript>
+    <link rel="stylesheet" href="styles.a6f96b69bdaabee8.css">
+  </noscript>
+  <style type="text/css"></style>
+  <style>
+    img[_ngcontent-ng-c468446520] {
+      width: auto;
+      height: auto;
+      max-width: 100%
+    }
+
+    body[_ngcontent-ng-c468446520] {
+      font-family: PoppinsRegular;
+      color: #525252
+    }
+
+    a[_ngcontent-ng-c468446520] {
+      transition: all .5s ease-in-out;
+      -webkit-transition: all .5s ease-in-out;
+      text-decoration: none
+    }
+
+    a[_ngcontent-ng-c468446520]:hover {
+      text-decoration: none
+    }
+
+    h1[_ngcontent-ng-c468446520],
+    h2[_ngcontent-ng-c468446520],
+    h3[_ngcontent-ng-c468446520],
+    h4[_ngcontent-ng-c468446520],
+    h5[_ngcontent-ng-c468446520],
+    h6[_ngcontent-ng-c468446520],
+    p[_ngcontent-ng-c468446520],
+    ul[_ngcontent-ng-c468446520],
+    ol[_ngcontent-ng-c468446520],
+    li[_ngcontent-ng-c468446520] {
+      position: relative
+    }
+
+    ul[_ngcontent-ng-c468446520] {
+      padding: 0;
+      margin: 0
+    }
+
+    .form-control[_ngcontent-ng-c468446520],
+    input[_ngcontent-ng-c468446520],
+    .form-control[_ngcontent-ng-c468446520]:focus,
+    select[_ngcontent-ng-c468446520] {
+      outline: none;
+      box-shadow: none
+    }
+
+    textarea[_ngcontent-ng-c468446520] {
+      resize: none
+    }
+
+    strong[_ngcontent-ng-c468446520] {
+      font-family: PoppinsNormal
+    }
+
+    button[_ngcontent-ng-c468446520],
+    button[_ngcontent-ng-c468446520]:focus,
+    button[_ngcontent-ng-c468446520]:hover {
+      outline: none;
+      box-shadow: none
+    }
+
+    .btn-success[_ngcontent-ng-c468446520] {
+      background: #098a1a
+    }
+
+    .header-top[_ngcontent-ng-c468446520] {
+      background-color: #ebebeb;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 23px;
+      font-family: PoppinsLight
+    }
+
+    .header-top[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520],
+    .header-top[_ngcontent-ng-c468446520] .time[_ngcontent-ng-c468446520] {
+      color: #000;
+      font-weight: 400
+    }
+
+    .header-top[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520]:not(:first-child) {
+      margin-left: .5rem
+    }
+
+    .header-top[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520] {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer
+    }
+
+    .header-top[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520]:not(.theme):hover {
+      text-decoration: underline
+    }
+
+    .header-top[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520]+a[_ngcontent-ng-c468446520] {
+      margin-left: .5rem
+    }
+
+    .header-top[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a.theme[_ngcontent-ng-c468446520] {
+      padding: .15rem .45rem;
+      border: 1px solid #333333;
+      background-color: #fff
+    }
+
+    .header-top[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a.theme.dark[_ngcontent-ng-c468446520] {
+      color: #fff;
+      background-color: #333;
+      margin-left: -2.9px !important
+    }
+
+    .navbar[_ngcontent-ng-c468446520] {
+      background-color: #00426a;
+      padding: 0;
+      border-bottom: solid 1px #f4f4f4;
+      border-top: solid 1px #f4f4f4;
+      width: 100%;
+      left: 0;
+      top: 0;
+      position: relative;
+      z-index: 999
+    }
+
+    .header[_ngcontent-ng-c468446520] {
+      position: relative;
+      z-index: 99
+    }
+
+    .sticky[_ngcontent-ng-c468446520] {
+      position: fixed
+    }
+
+    .navbar-nav[_ngcontent-ng-c468446520] .nav-link[_ngcontent-ng-c468446520] {
+      color: #fff;
+      line-height: 40px;
+      font-size: 15px;
+      padding: 0 10px;
+      font-weight: 400
+    }
+
+    .navbar-nav[_ngcontent-ng-c468446520] .nav-link.home[_ngcontent-ng-c468446520] {
+      font-size: 24px;
+      padding-left: 0
+    }
+
+    .navbar-nav[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520]:hover,
+    .navbar-nav[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a.active[_ngcontent-ng-c468446520] {
+      color: #f8941d !important
+    }
+
+    .navbar-nav[_ngcontent-ng-c468446520] .dropdown-menu[_ngcontent-ng-c468446520] {
+      border: none !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      box-shadow: 0 15px 35px #0000001a;
+      top: 38px;
+      min-width: 200px
+    }
+
+    .navbar-nav[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+      margin: 0 15px
+    }
+
+    .navbar-nav[_ngcontent-ng-c468446520] .dropdown-menu[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+      margin: 0 !important
+    }
+
+    .navbar-nav[_ngcontent-ng-c468446520] .dropdown-menu[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520] {
+      padding: 7px 15px !important;
+      font-size: 14px
+    }
+
+    .navbar-nav[_ngcontent-ng-c468446520] .dropdown-menu[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520]:hover {
+      color: #fff !important;
+      background: #f8941d !important
+    }
+
+    .navbar-toggler[_ngcontent-ng-c468446520] {
+      background: #098a1a;
+      padding: 2px 10px
+    }
+
+    .navbar-toggler-icon[_ngcontent-ng-c468446520] {
+      filter: invert(1)
+    }
+
+    .navbar-toggler[_ngcontent-ng-c468446520]:focus {
+      box-shadow: none
+    }
+
+    .btn-primary[_ngcontent-ng-c468446520] {
+      background-color: #124b9e !important;
+      border: none !important;
+      line-height: normal;
+      padding: 8px 12px;
+      font-size: 14px;
+      letter-spacing: 1px
+    }
+
+    .btn-primary[_ngcontent-ng-c468446520]:hover {
+      background-color: #f7941d !important
+    }
+
+    .btn-primary-home[_ngcontent-ng-c468446520] {
+      background-color: #f7941d !important;
+      border: none !important;
+      line-height: 28px;
+      padding: 10px 20px;
+      font-size: 14px;
+      letter-spacing: 1px
+    }
+
+    .btn-primary-home[_ngcontent-ng-c468446520]:hover {
+      background-color: #124b9e !important
+    }
+
+    .footer[_ngcontent-ng-c468446520] {
+      background: #115a87;
+      padding: 20px 0;
+      color: #fff
+    }
+
+    .footer[_ngcontent-ng-c468446520] p[_ngcontent-ng-c468446520] {
+      color: #fff;
+      font-family: PoppinsLight;
+      font-size: 14px;
+      margin: 0 0 10px
+    }
+
+    .footer[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+      list-style: none;
+      line-height: 1.9
+    }
+
+    .footer[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520] {
+      color: #fff
+    }
+
+    .footer[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520]:hover {
+      color: #f8941d;
+      text-decoration: underline
+    }
+
+    .footer[_ngcontent-ng-c468446520] h2[_ngcontent-ng-c468446520] {
+      color: #f8941d;
+      font-size: 16px;
+      font-family: PoppinsMedium;
+      margin: 0 0 10px;
+      text-decoration: underline
+    }
+
+    .social_icon[_ngcontent-ng-c468446520] {
+      margin: 0 0 0 20px
+    }
+
+    .social_icon[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520] {
+      color: #fff;
+      font-size: 24px;
+      display: inline-block;
+      text-align: center;
+      margin-right: 8px
+    }
+
+    .social_icon[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520]:hover {
+      color: #f8941d
+    }
+
+    .footer[_ngcontent-ng-c468446520] strong[_ngcontent-ng-c468446520] {
+      font-family: PoppinsMedium
+    }
+
+    .footer[_ngcontent-ng-c468446520] .visitors[_ngcontent-ng-c468446520] {
+      color: #f8941d !important
+    }
+
+    .copyright[_ngcontent-ng-c468446520] {
+      background: #345a88;
+      padding: 15px 0;
+      margin: 40px 0 0
+    }
+
+    .copyright[_ngcontent-ng-c468446520] p[_ngcontent-ng-c468446520] {
+      margin: 0
+    }
+
+    .backtotop[_ngcontent-ng-c468446520] {
+      position: fixed;
+      right: 20px;
+      bottom: 30px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: none;
+      border-radius: 50%;
+      background: #F7941D;
+      color: #fff;
+      text-align: center
+    }
+
+    .backtotop[_ngcontent-ng-c468446520] i[_ngcontent-ng-c468446520] {
+      font-size: 20px;
+      line-height: 40px;
+      color: #fff
+    }
+
+    .backtotop[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520]:hover {
+      color: #fff
+    }
+
+    .event-section[_ngcontent-ng-c468446520] .sec-title[_ngcontent-ng-c468446520]:after,
+    .stories-section[_ngcontent-ng-c468446520] .sec-title[_ngcontent-ng-c468446520]:after,
+    .happening-section[_ngcontent-ng-c468446520] .sec-title[_ngcontent-ng-c468446520]:after {
+      width: 100px
+    }
+
+    .inner-bg[_ngcontent-ng-c468446520] {
+      background-size: cover;
+      min-height: 500px
+    }
+
+    .inner-banner[_ngcontent-ng-c468446520] {
+      display: flex;
+      align-items: center;
+      min-height: 80px;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      position: relative
+    }
+
+    .inner-banner-content[_ngcontent-ng-c468446520] h2[_ngcontent-ng-c468446520] {
+      font-size: 28px;
+      line-height: 30px;
+      font-family: AntonRegular;
+      color: #fff;
+      border: none;
+      float: left;
+      padding-top: 5px
+    }
+
+    .layer[_ngcontent-ng-c468446520] {
+      background: rgba(0, 0, 0, .65);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      inset: 0
+    }
+
+    .breadcrumbsection[_ngcontent-ng-c468446520] {
+      background-color: #f3f3f3
+    }
+
+    .breadcrumb[_ngcontent-ng-c468446520] {
+      margin-bottom: 0rem;
+      list-style: none;
+      background-color: transparent;
+      border-radius: 0rem;
+      padding: 4px 0
+    }
+
+    .breadcrumb-item[_ngcontent-ng-c468446520] a[_ngcontent-ng-c468446520] {
+      color: #00426a;
+      font-size: 14px
+    }
+
+    .breadcrumb-item.active[_ngcontent-ng-c468446520] {
+      font-size: 14px;
+      padding-top: 2px
+    }
+
+    .breadcrumb-item[_ngcontent-ng-c468446520]+.breadcrumb-item[_ngcontent-ng-c468446520]:before {
+      display: inline-block;
+      padding-right: .5rem;
+      color: #6c757d;
+      content: "/"
+    }
+
+    @media (max-width:1199px) {
+      .navbar[_ngcontent-ng-c468446520] {
+        padding: 3px 0
+      }
+
+      .navbar-nav[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+        margin: 0 10px
+      }
+
+      .nav-pills[_ngcontent-ng-c468446520] .nav-link[_ngcontent-ng-c468446520] {
+        padding: 10px 23px
+      }
+
+      .school-choice-section[_ngcontent-ng-c468446520] .tab-content[_ngcontent-ng-c468446520] {
+        padding: 0
+      }
+
+      .school-choice-section[_ngcontent-ng-c468446520] .card-body[_ngcontent-ng-c468446520] {
+        padding: 20px
+      }
+
+      .school-choice-section[_ngcontent-ng-c468446520] .detail[_ngcontent-ng-c468446520] {
+        padding: 0
+      }
+
+      .banner[_ngcontent-ng-c468446520] {
+        height: auto
+      }
+
+      .welcome-section[_ngcontent-ng-c468446520] p[_ngcontent-ng-c468446520] {
+        line-height: 24px;
+        padding-right: 0
+      }
+
+      .about-left[_ngcontent-ng-c468446520] {
+        padding: 0
+      }
+    }
+
+    @media (max-width: 991px) {
+      .logo[_ngcontent-ng-c468446520] {
+        width: 90%
+      }
+
+      .navbar-nav[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+        margin: 0
+      }
+
+      .navbar[_ngcontent-ng-c468446520] form[_ngcontent-ng-c468446520] {
+        position: absolute;
+        right: 15px;
+        top: 3px
+      }
+
+      .navbar-nav[_ngcontent-ng-c468446520] .nav-link[_ngcontent-ng-c468446520] {
+        padding-left: 0
+      }
+
+      .navbar-collapse[_ngcontent-ng-c468446520] {
+        width: 250px;
+        background: #fff;
+        position: fixed;
+        height: 100% !important;
+        z-index: 99;
+        right: -250px;
+        top: 0;
+        padding: 20px;
+        display: block !important;
+        transition: all .3s;
+        box-shadow: 0 0 10px #00000029
+      }
+
+      .navbar-collapse.show[_ngcontent-ng-c468446520] {
+        right: 0
+      }
+
+      .banner-text[_ngcontent-ng-c468446520] h1[_ngcontent-ng-c468446520] {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 8px
+      }
+
+      .banner-text[_ngcontent-ng-c468446520] p[_ngcontent-ng-c468446520],
+      .slider-subheading[_ngcontent-ng-c468446520] {
+        display: none
+      }
+
+      .banner-text[_ngcontent-ng-c468446520] .btn-primary[_ngcontent-ng-c468446520] {
+        line-height: 20px;
+        padding: 5px 15px;
+        font-size: 11px;
+        letter-spacing: 0
+      }
+
+      .tiles[_ngcontent-ng-c468446520] {
+        margin: 0 0 30px 30px
+      }
+    }
+
+    @media (max-width:767px) {
+      .copyright[_ngcontent-ng-c468446520] p.me-5[_ngcontent-ng-c468446520] {
+        margin: 0 !important
+      }
+
+      .footer[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] {
+        margin: 0 0 20px
+      }
+
+      .social_icon[_ngcontent-ng-c468446520] {
+        margin: 0 0 20px 20px
+      }
+
+      .header-top[_ngcontent-ng-c468446520] {
+        font-size: 12px
+      }
+
+      .nav-pills[_ngcontent-ng-c468446520] .nav-link[_ngcontent-ng-c468446520] {
+        padding: 10px 15px;
+        width: 100%;
+        font-size: 12px;
+        white-space: initial;
+        border-radius: 8px !important
+      }
+
+      #pills-tab[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+        white-space: nowrap;
+        border: none !important
+      }
+
+      #pills-tab[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+        white-space: nowrap;
+        width: 100%
+      }
+
+      .welcome-section[_ngcontent-ng-c468446520] .col-md-4[_ngcontent-ng-c468446520] {
+        margin-top: 30px
+      }
+
+      .volunteer-section[_ngcontent-ng-c468446520] .col-md-4[_ngcontent-ng-c468446520]+.col-md-4[_ngcontent-ng-c468446520],
+      .volunteer-section[_ngcontent-ng-c468446520] .col-md-8[_ngcontent-ng-c468446520]+.col-md-4[_ngcontent-ng-c468446520],
+      .event-section[_ngcontent-ng-c468446520] .col-md-5[_ngcontent-ng-c468446520] {
+        margin-top: 30px
+      }
+
+      .copyright[_ngcontent-ng-c468446520] p[_ngcontent-ng-c468446520] {
+        text-align: center;
+        width: 100%
+      }
+
+      .copyright[_ngcontent-ng-c468446520] text-end[_ngcontent-ng-c468446520] {
+        text-align: center !important
+      }
+
+      .sec-title[_ngcontent-ng-c468446520] {
+        font-size: 24px;
+        line-height: 34px
+      }
+
+      .sec-title[_ngcontent-ng-c468446520]:after {
+        margin-top: 10px
+      }
+
+      .school-choice-section[_ngcontent-ng-c468446520] h4[_ngcontent-ng-c468446520] {
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 20px
+      }
+
+      .tweet-heading[_ngcontent-ng-c468446520] {
+        font-size: 12px
+      }
+
+      .banner[_ngcontent-ng-c468446520] .owl-nav[_ngcontent-ng-c468446520] {
+        display: none
+      }
+
+      .happening-section[_ngcontent-ng-c468446520] {
+        padding-bottom: 20px !important
+      }
+
+      .tiles[_ngcontent-ng-c468446520] .thumbs[_ngcontent-ng-c468446520] {
+        width: 120px
+      }
+
+      .tiles[_ngcontent-ng-c468446520] .detail[_ngcontent-ng-c468446520] {
+        padding-left: 109px
+      }
+
+      #service-activity[_ngcontent-ng-c468446520] .tiles[_ngcontent-ng-c468446520] .detail[_ngcontent-ng-c468446520] {
+        padding-left: 60px !important
+      }
+
+      #service-activity[_ngcontent-ng-c468446520] .tiles[_ngcontent-ng-c468446520] .thumbs[_ngcontent-ng-c468446520] {
+        width: 70px
+      }
+
+      .inner-banner[_ngcontent-ng-c468446520] {
+        padding-top: 20px;
+        min-height: 100px
+      }
+
+      .inner-banner-content[_ngcontent-ng-c468446520] h2[_ngcontent-ng-c468446520] {
+        width: 100%;
+        font-size: 24px;
+        line-height: normal
+      }
+    }
+
+    @media (max-width:600px) {
+      .event-box[_ngcontent-ng-c468446520] {
+        flex-wrap: wrap
+      }
+
+      .event-dates[_ngcontent-ng-c468446520] {
+        width: 100%;
+        margin-bottom: 20px
+      }
+
+      .event-text[_ngcontent-ng-c468446520] {
+        width: 100%;
+        padding-left: 0
+      }
+    }
+
+    @media (max-width:480px) {
+      .participate-service[_ngcontent-ng-c468446520] #pills-tab[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+        width: auto
+      }
+
+      .tiles[_ngcontent-ng-c468446520] {
+        min-height: 85px
+      }
+
+      .tiles[_ngcontent-ng-c468446520] p[_ngcontent-ng-c468446520] {
+        font-size: 12px
+      }
+
+      .tiles[_ngcontent-ng-c468446520] span[_ngcontent-ng-c468446520] {
+        font-size: 16px
+      }
+
+      .tiles[_ngcontent-ng-c468446520] .thumbs[_ngcontent-ng-c468446520] {
+        width: 100px
+      }
+
+      .tiles[_ngcontent-ng-c468446520] .detail[_ngcontent-ng-c468446520] {
+        padding-left: 80px
+      }
+    }
+
+    @media (max-width:375px) {
+      .tiles[_ngcontent-ng-c468446520] .thumbs[_ngcontent-ng-c468446520] {
+        width: 75px
+      }
+
+      .tiles[_ngcontent-ng-c468446520] .detail[_ngcontent-ng-c468446520] {
+        padding-left: 60px
+      }
+    }
+
+    .card-form[_ngcontent-ng-c468446520] {
+      background-color: #fff;
+      border: 1px solid #d7d7d7;
+      border-radius: 5px;
+      overflow: hidden
+    }
+
+    .card-form[_ngcontent-ng-c468446520] p[_ngcontent-ng-c468446520] {
+      margin-bottom: 5px
+    }
+
+    .sub-redio[_ngcontent-ng-c468446520] {
+      background-color: #f5f5f5;
+      padding: 5px 8px;
+      border-radius: 4px;
+      margin-top: 10px
+    }
+
+    .otpfield[_ngcontent-ng-c468446520] {
+      width: 100px;
+      height: 40px;
+      margin-right: 10px
+    }
+
+    .error[_ngcontent-ng-c468446520] {
+      color: #df0000;
+      font-size: 12px
+    }
+
+    .otp-success[_ngcontent-ng-c468446520] {
+      color: #41bd02;
+      font-size: 12px
+    }
+
+    .logininstructionBg[_ngcontent-ng-c468446520] {
+      background-image: linear-gradient(45deg, #00426a, #0076bd);
+      background-size: cover;
+      background-position: top right
+    }
+
+    .logininstructionBg[_ngcontent-ng-c468446520] h4[_ngcontent-ng-c468446520] {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 22px;
+      margin-top: 13px
+    }
+
+    .logininstructionBg[_ngcontent-ng-c468446520] ul[_ngcontent-ng-c468446520] {
+      list-style-type: square;
+      font-size: 15px;
+      margin-top: 30px
+    }
+
+    .logininstructionBg[_ngcontent-ng-c468446520] li[_ngcontent-ng-c468446520] {
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 15px;
+      margin-left: 25px;
+      text-align: justify;
+      line-height: 20px
+    }
+
+    .logininstructionBg[_ngcontent-ng-c468446520] p[_ngcontent-ng-c468446520] {
+      color: #f7f31d;
+      font-size: 13px;
+      margin-top: 20px;
+      margin-bottom: 20px
+    }
+
+    .themeFontcolor[_ngcontent-ng-c468446520] {
+      color: #0350dd
+    }
+
+    .font14[_ngcontent-ng-c468446520] {
+      font-size: 18px;
+      margin-left: 10px
+    }
+
+    .sideMenu[_ngcontent-ng-c468446520] h6[_ngcontent-ng-c468446520] {
+      text-align: center;
+      padding: 10px;
+      background: #00426a;
+      color: #fff
+    }
+
+    .sideMenu[_ngcontent-ng-c468446520] .list-group[_ngcontent-ng-c468446520] .list-group-item[_ngcontent-ng-c468446520]:hover {
+      border: 1px solid #dfdfdf;
+      color: #fff;
+      background: #f05a22
+    }
+
+    .sideMenu[_ngcontent-ng-c468446520] .list-group[_ngcontent-ng-c468446520] a.active[_ngcontent-ng-c468446520] {
+      background: #f05a22;
+      border: 1px solid #dfdfdf;
+      color: #fff
+    }
+
+    .sideMenu[_ngcontent-ng-c468446520] .list-group[_ngcontent-ng-c468446520] a.active[_ngcontent-ng-c468446520]:hover {
+      color: #fff
+    }
+
+    .bg-primary-gradient[_ngcontent-ng-c468446520] {
+      background-image: linear-gradient(45deg, #0665e9, #7eaef3) !important
+    }
+
+    .bg-danger-gradient[_ngcontent-ng-c468446520] {
+      background-image: linear-gradient(45deg, #f93a5a, #f7778c) !important
+    }
+
+    .bg-success-gradient[_ngcontent-ng-c468446520] {
+      background-image: linear-gradient(to left, #48d6a8 0%, #029666 100%) !important
+    }
+
+    .bg-warning-gradient[_ngcontent-ng-c468446520] {
+      background-image: linear-gradient(to left, #efa65f, #f76a2d) !important
+    }
+
+    .form-check-input[type=checkbox][_ngcontent-ng-c468446520] {
+      border: 1px solid #00a1ff !important
+    }
+
+    span[_ngcontent-ng-c468446520] {
+      content: "\27a4"
+    }
+  </style>
+  <style>
+    .main-div[_ngcontent-ng-c2880903905] mat-card[_ngcontent-ng-c2880903905] {
+      padding: 0
+    }
+
+    .login-form[_ngcontent-ng-c2880903905] {
+      padding: 20px
+    }
+
+    .captcha[_ngcontent-ng-c2880903905] {
+      max-width: 50%
+    }
+
+    .toast-container[_ngcontent-ng-c2880903905] .ngx-toastr[_ngcontent-ng-c2880903905] {
+      position: sticky
+    }
+
+    .centered-label[_ngcontent-ng-c2880903905],
+    .center-text[_ngcontent-ng-c2880903905] {
+      text-align: center
+    }
+
+    .form-check-input[type=checkbox][_ngcontent-ng-c2880903905] {
+      border: 1px solid #00a1ff !important
+    }
+
+    .form-check-input[type=radio][_ngcontent-ng-c2880903905] {
+      border-radius: 50%;
+      border: 1px solid #00a1ff !important
+    }
+  </style>
+  <style>
+    .ngx-spinner-overlay[_ngcontent-ng-c4183080771] {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%
+    }
+
+    .ngx-spinner-overlay[_ngcontent-ng-c4183080771]>div[_ngcontent-ng-c4183080771]:not(.loading-text) {
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      position: absolute;
+      transform: translate(-50%, -50%)
+    }
+
+    .loading-text[_ngcontent-ng-c4183080771] {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -60%)
+    }
+  </style>
+  <style id="__web-inspector-hide-shortcut-style__">
+    .__web-inspector-hide-shortcut__,
+    .__web-inspector-hide-shortcut__ *,
+    .__web-inspector-hidebefore-shortcut__::before,
+    .__web-inspector-hideafter-shortcut__::after {
+      visibility: hidden !important;
+    }
+  </style>
+</head>
+
+<body class="mat-typography">
+  <app-root _nghost-ng-c749487550="" ng-version="16.1.3">
+    <div _ngcontent-ng-c749487550="" class="container"><app-header _ngcontent-ng-c749487550=""
+        _nghost-ng-c1126185556="">
+        <div _ngcontent-ng-c1126185556="" class="container">
+          <header _ngcontent-ng-c1126185556="">
+            <div _ngcontent-ng-c1126185556="" class="mid-header pt-3 pb-3">
+              <div _ngcontent-ng-c1126185556="" class="container d-flex justify-content-between align-items-center"><a
+                  _ngcontent-ng-c1126185556="" href="https://scholarships.gov.in/registrations/#"
+                  class="navbar-brand"><img _ngcontent-ng-c1126185556="" class="img-fluid logo"
+                    src="./student_regis_files/schollar-logo.png"></a><a _ngcontent-ng-c1126185556=""
+                  href="https://scholarships.gov.in/registrations/#"><img _ngcontent-ng-c1126185556=""
+                    src="./student_regis_files/digital-india-logo.png" class="img-fluid"></a></div>
+            </div>
+          </header>
+        </div>
+      </app-header><router-outlet _ngcontent-ng-c749487550=""></router-outlet><app-form1 _nghost-ng-c2880903905=""
+        class="ng-star-inserted">
+        <div _ngcontent-ng-c2880903905="">
+          <div _ngcontent-ng-c2880903905="" class="inner-banner" style="background-color: #ff7300d6;">
+            <div _ngcontent-ng-c2880903905="" class="container">
+              <div _ngcontent-ng-c2880903905="" class="inner-banner-content">
+                <h2 _ngcontent-ng-c2880903905="" class="m-0">Scholar Connect - Student Registration</h2>
+              </div>
+            </div>
+          </div>
+          <form _ngcontent-ng-c2880903905="" method="POST" autocomplete="off" class="ng-invalid ng-dirty ng-touched">
+            <div _ngcontent-ng-c2880903905="" class="container">
+              <div _ngcontent-ng-c2880903905="" class="card-form shadow mt-4 p-4">
+                <div _ngcontent-ng-c2880903905="" class="card-form shadow p-4 mt-4 ng-star-inserted">
+                  <div _ngcontent-ng-c2880903905="" class="row">
+                    <div _ngcontent-ng-c2880903905="" class="col-sm-5">
+                      <div _ngcontent-ng-c2880903905="" class="mb-3"><label _ngcontent-ng-c2880903905=""
+                          class="form-label">Mobile No. <span _ngcontent-ng-c2880903905=""
+                            style="color: red;">*</span></label>
+                        <div _ngcontent-ng-c2880903905="" class="input-group">
+                          <input _ngcontent-ng-c2880903905="" type="text" placeholder="" formcontrolname="mobileNo"
+                            mobilenumberonly="" minlength="10"
+                            onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57"
+                            maxlength="10" id="mobileNo" aria-describedby="basic-addon2" required=""
+                            class="form-control ng-dirty ng-touched ng-valid" fdprocessedid="2ltdm">
+                          <!-- <button _ngcontent-ng-c2880903905="" type="button" id="basic-addon2" class="btn btn-sm btn-primary" fdprocessedid="vrrcht">Get OTP</button> --><button
+                            _ngcontent-ng-c2880903905="" type="button" id="basic-addon2" class="btn btn-sm btn-primary"
+                            hidden="">Resend OTP</button>
+                        </div>
+                        <div _ngcontent-ng-c2880903905="" style="margin: 5px 0px 0px 10px;"></div>
+                      </div>
+                      <div _ngcontent-ng-c2880903905="" class="mb-3">
+                      </div>
+                      <div _ngcontent-ng-c2880903905="" class="mb-3">
+                        <label _ngcontent-ng-c2880903905="" class="form-label">Email Id </label><input
+                          _ngcontent-ng-c2880903905="" type="email" formcontrolname="emailId" maxlength="100"
+                          class="form-control ng-untouched ng-pristine ng-invalid" fdprocessedid="ndnmt">
+                      </div>
+                    </div>
+                    <div _ngcontent-ng-c2880903905="" class="col-sm-7">
+                      <div _ngcontent-ng-c2880903905="" class="mb-3">
+                        <label _ngcontent-ng-c2880903905="" class="form-label">Student Name
+                          <span _ngcontent-ng-c2880903905="" style="color: red">*</span></label><input
+                          _ngcontent-ng-c2880903905="" type="text" formcontrolname="fname" maxlength="100"
+                          aria-label="default input example"
+                          onkeypress="return ((event.charCode &gt;= 65 &amp;&amp; event.charCode &lt;= 90) || (event.charCode &gt;= 97 &amp;&amp; event.charCode &lt;= 122) || (event.charCode == 32))"
+                          class="form-control ng-untouched ng-pristine ng-valid" fdprocessedid="qenhn">
+                      </div>
+
+                      <div _ngcontent-ng-c2880903905="" class="mb-3">
+                        <label _ngcontent-ng-c2880903905="" class="form-label">Password <span
+                            _ngcontent-ng-c2880903905="" style="color: red">*</span></label><input
+                          _ngcontent-ng-c2880903905="" type="password" formcontrolname="fname" maxlength="100"
+                          aria-label="default input example"
+                          onkeypress="return ((event.charCode &gt;= 65 &amp;&amp; event.charCode &lt;= 90) || (event.charCode &gt;= 97 &amp;&amp; event.charCode &lt;= 122) || (event.charCode == 32))"
+                          class="form-control ng-untouched ng-pristine ng-valid">
+                      </div>
+                    </div>
+                    <!-- <div _ngcontent-ng-c2880903905="" class="col-sm-3"><div _ngcontent-ng-c2880903905="" class="mb-3"><label _ngcontent-ng-c2880903905="" class="form-label">Enter OTP <span _ngcontent-ng-c2880903905="" style="color: red;">*</span></label><input _ngcontent-ng-c2880903905="" type="text" aria-label="default input example" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" maxlength="6" formcontrolname="otp" class="form-control ng-dirty ng-valid ng-touched" fdprocessedid="tqpdp"><i _ngcontent-ng-c2880903905="" class="pi pi-check"></i></div></div> --><!-- <div _ngcontent-ng-c2880903905="" class="col-sm-3"><div _ngcontent-ng-c2880903905="" class="mb-3"><label _ngcontent-ng-c2880903905="" class="form-label d-block">&nbsp;</label><button _ngcontent-ng-c2880903905="" type="button" class="btn btn-sm btn-primary" fdprocessedid="njhpxo">Verify</button> &nbsp;&nbsp; </div></div> -->
+                  </div>
+                  <div _ngcontent-ng-c2880903905="" class="row">
+                    <div _ngcontent-ng-c2880903905="" class="col-sm-12"></div>
+                  </div>
+                  <div _ngcontent-ng-c2880903905="" class="text-center ng-star-inserted">
+                    <button _ngcontent-ng-c2880903905="" type="button" class="btn btn-sm btn-primary mt-4"
+                      fdprocessedid="azn0xn">
+                      Register
+                    </button>
+                  </div>
+                </div><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                <form _ngcontent-ng-c2880903905="" novalidate="" autocomplete="off"
+                  class="ng-untouched ng-pristine ng-valid"><!----></form>
+                <form _ngcontent-ng-c2880903905="" novalidate="" autocomplete="off"
+                  class="ng-untouched ng-pristine ng-invalid"><!----><!----></form><!---->
+              </div>
+            </div>
+          </form><ngx-spinner _ngcontent-ng-c2880903905="" _nghost-ng-c4183080771=""
+            class="ng-tns-c4183080771-1 ng-star-inserted"><!----></ngx-spinner>
+        </div>
+        <div _ngcontent-ng-c2880903905="" class="ng-star-inserted"></div><!----><!---->
+      </app-form1><!----><app-time-picker _ngcontent-ng-c749487550="" _nghost-ng-c1699152912=""></app-time-picker></div>
+  </app-root>
+  <script src="./student_regis_files/runtime.d910e326731196ce.js.download" type="module"></script>
+  <script src="./student_regis_files/polyfills.d6dbc0eef1bc8e2a.js.download" type="module"></script>
+  <script src="./student_regis_files/scripts.b66a752a189d2a61.js.download" defer="defer"></script>
+  <script src="./student_regis_files/main.15ad29604f3329fb.js.download" type="module"></script>
+
+</body>
+
+</html>

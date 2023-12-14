@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load tailwind_filters %}
+{% block start %}
+
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success" role="alert">
+  {% if message.tags %}{{ message }}{% endif %}
+</div> 
+{% endfor %}
+{% endif %}
+
+<form class="col-6 mx-auto card p-4 m-4 shadow-lg" action="" method="POST" >
+  {% csrf_token %}
+    <!-- Email input -->
+    {{ form.username | as_crispy_field }}
+    {{ form.password | as_crispy_field }}
+
+  
+      <div class="col">
+        <!-- Simple link -->
+        <a href="#!">Forgot password?</a>
+      </div>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Not a member? <a href="/register">Register</a></p>
+      <p>or sign up with:</p>
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-google"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-twitter"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-github"></i>
+      </button>
+    </div>
+  </form>
+{% endblock start %}
