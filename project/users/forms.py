@@ -34,6 +34,8 @@ class CustomUserForm(forms.ModelForm):
             raise forms.ValidationError(
                 "Passwords do not match"
             )
+        
+    
 
 class StudentForm(forms.ModelForm):
     class Meta:
