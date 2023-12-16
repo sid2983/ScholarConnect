@@ -10,6 +10,8 @@ from django.contrib import messages
 # Create your views here.
 
 
+from django.contrib.auth.hashers import make_password
+
 def register_student(request):
     if request.method == 'POST':
         user_form = CustomUserForm(request.POST)
@@ -20,6 +22,7 @@ def register_student(request):
             # Save the user form with user_type set to 1 for students
             user = user_form.save(commit=False)
             user.user_type = 1  # Assuming 1 represents the "Student" user type
+            user.password = make_password(user_form.cleaned_data['password'])  # Manually hash the password
             user.save()
 
             # Save the student form with the user instance
@@ -36,6 +39,7 @@ def register_student(request):
     return render(request, 'users/register.html', {'user_form': user_form, 'student_form': student_form})
 
 
+
 def registration_success(request):
     print('it worked')
     print(request.user)
@@ -46,64 +50,25 @@ def registration_success(request):
 
 
 
-# def student_login(request):
-#     if request.method == 'POST':
-#         form = AuthenticationForm(request, data=request.POST)
-#         if form.is_valid():
-#             print('working')
-#             username = form.cleaned_data.get('username')
-#             password = form.cleaned_data.get('password')
-#             user = authenticate(request, username=username, password=password)
-#             print('working')
-#             if user is not None:
-#                 login(request, user)
-#                 print('login working')
-
-#                 # Redirect based on user type
-#                 if hasattr(user, 'student'):
-#                     print('student')
-#                     return HttpResponseRedirect(reverse('scholar:dashboard'))
-
-#                 elif hasattr(user, 'institute'):
-#                     print('institute')
-#                     HttpResponseRedirect(reverse('scholar:dashboard'))
-
-#                 elif hasattr(user, 'stateauthority'):
-#                     print('stateauthority')
-#                     HttpResponseRedirect(reverse('scholar:dashboard'))
-#                 else:
-#                     messages.error(request, 'Unknown user type.')
-#                     HttpResponseRedirect(reverse('scholar:dashboard'))
-
-
-
-#             else:
-#                 messages.error(request, 'Invalid username or password.')
-
-#     else:
-#         form = AuthenticationForm()
-
-#     return render(request, 'users/login.html', {'form': form})
 def student_login(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
-        print(form.errors)
         if form.is_valid():
+            print('working')
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(request, username=username, password=password)
-
+            print('working')
             if user is not None:
-                if user.user_type == 1:  # Check if user_type is 1 (Student)
-                    login(request, user)
+                login(request, user)
+                print('login working')
+                print(user.user_type)
+                if user.user_type == 1:
+                    print(' a student logged in')
                     return HttpResponseRedirect(reverse('scholar:dashboard'))
-                else:
-                    messages.error(request, 'Invalid user type for student login.')
+
             else:
                 messages.error(request, 'Invalid username or password.')
-        else:
-            print(form.errors)
-            messages.error(request, f'Form is not valid. Check form data: {form.errors}')
 
     else:
         form = AuthenticationForm()

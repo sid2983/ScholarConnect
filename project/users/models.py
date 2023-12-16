@@ -80,7 +80,9 @@ class CustomUserManager(BaseUserManager):
     def create_user(self, username, password=None, user_type=None, **extra_fields):
         user = self.model(username=username, user_type=user_type, **extra_fields)
         user.set_password(password)
+        print(f"Password before save: {user.password}")
         user.save(using=self._db)
+        print(f"Password after save: {user.password}")
         return user
 
     def create_superuser(self, username, password=None, **extra_fields):
@@ -90,6 +92,7 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(username, password, **extra_fields)
 
 class CustomUser(AbstractUser):
+    USERNAME_FIELD = 'username'
     USER_TYPE_CHOICES = (
         (1, 'Student'),
         (2, 'Institute'),

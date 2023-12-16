@@ -68,3 +68,7 @@ from django.contrib import messages
 
 def home(request):
     return render(request, 'base.html')
+
+
+def dashboard(request):
+    return render(request, 'users/dashboard.html')

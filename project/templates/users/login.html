@@ -10,12 +10,17 @@
 </div> 
 {% endfor %}
 {% endif %}
-
+{% comment %} 
 <form class="col-6 mx-auto card p-4 m-4 shadow-lg" action="" method="POST" >
   {% csrf_token %}
     <!-- Email input -->
-    {{ form.username | as_crispy_field }}
-    {{ form.password | as_crispy_field }}
+    {{form.username.label_tag}}
+    {{ form.username }}
+    {{form.username.errors}}
+    {{form.password.label_tag}}
+    {{ form.password}}
+    {{form.password.errors}}
+
 
   
       <div class="col">
@@ -26,8 +31,30 @@
   
     <!-- Submit button -->
     <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
-  
+   {% endcomment %}
     <!-- Register buttons -->
+
+    <div class="bg-white p-8 rounded shadow-md w-96">
+      <h1 class="text-2xl font-semibold mb-4">Login</h1>
+
+      <form id="loginForm" method="post" action="{% url 'users:student_login' %}">
+          {% csrf_token %}
+          
+          <div class="mb-4">
+              <label for="username" class="block text-sm font-medium text-gray-600">Username</label>
+              <input type="text" name="username" id="username" class="mt-1 p-2 w-full border rounded-md">
+          </div>
+
+          <div class="mb-4">
+              <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
+              <input type="password" name="password" id="password" class="mt-1 p-2 w-full border rounded-md">
+          </div>
+
+          <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md">Login</button>
+      </form>
+  </div>
+
+
     <div class="text-center">
       <p>Not a member? <a href="/register">Register</a></p>
       <p>or sign up with:</p>
